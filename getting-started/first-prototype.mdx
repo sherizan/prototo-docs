@@ -1,0 +1,58 @@
+---
+title: "Your first prototype"
+description: "Describe it. Watch it appear on your device."
+---
+
+Once Prototo is installed and your Simulator is open, open a second Terminal window and navigate to your project:
+
+```bash
+cd myapp
+claude
+```
+
+You're now in Claude Code inside your Proto project. Claude Code has already read your DESIGN.md and CLAUDE.md — it knows your design system, your component library, and the rules for generating screens. You don't repeat yourself.
+
+## Describe your first screen
+
+Type this into Claude Code:
+
+```
+add a settings screen with notification and dark mode toggles
+```
+
+Watch the Simulator. In about 10 seconds your screen appears.
+
+Real native layout. Real scroll physics. Your design system applied automatically — colour, typography, spacing, shape, all pulled from DESIGN.md.
+
+## Iterate with prompts
+
+Keep describing. Claude Code keeps generating.
+
+```
+make the quick action buttons pill-shaped with an icon
+above the label, arranged in a row with equal spacing
+```
+
+```
+add a bottom nav with Home, Cards, Activity and Profile tabs
+```
+
+```
+add a profile screen with a large avatar, the user's
+name and bio, and a grid of recent posts
+```
+
+Each prompt updates the Simulator in seconds. You never touch a file.
+
+## What just happened
+
+The flow is the same every time:
+
+```
+1. You type a prompt in Claude Code
+2. Claude Code reads DESIGN.md and CLAUDE.md for context
+3. Claude Code writes a new screen file to /screens/
+4. The Simulator hot-reloads — the screen appears
+```
+
+Total time: ~10 seconds.

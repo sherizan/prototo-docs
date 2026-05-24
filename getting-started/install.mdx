@@ -1,0 +1,66 @@
+---
+title: "Install Prototo"
+description: "One command. Under 90 seconds to a native prototype."
+---
+
+The north star is simple: time from `npm create proto@latest` to a working prototype running in the iOS Simulator — under 90 seconds.
+
+You need two things installed once before that command works. Both are free. Both are macOS-only.
+
+## Step 1 — Install Node.js
+
+Node.js 18 or newer is the only prerequisite. Download the LTS version from nodejs.org and install it.
+
+[Download Node.js →](https://nodejs.org/en/download)
+
+You'll know it worked when you can open Terminal and type:
+
+```bash
+node --version
+```
+
+If you see a version number, you're done.
+
+## Step 2 — Install Xcode
+
+Xcode is Apple's developer tool. Prototo uses its iOS Simulator — the iPhone preview that runs on your Mac. You never need to open Xcode itself. Just install it.
+
+Download Xcode free from the Mac App Store:
+
+[Download Xcode →](https://apps.apple.com/app/xcode/id497799835)
+
+After installing, open Terminal and run this once:
+
+```bash
+xcode-select --install
+```
+
+This installs the command line tools Xcode needs to run the Simulator.
+
+<Note>
+Xcode is ~8GB. Plan for 20-40 minutes depending on your connection.
+</Note>
+
+## Step 3 — Install Claude Code
+
+Claude Code is the design tool. You'll describe screens in plain language and it will write them into your project. There is no other prompt surface — Claude Code CLI is the only one.
+
+Install it by running:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+You'll need an Anthropic account. Sign up at claude.ai if you don't have one.
+
+## Step 4 — Create your first Proto project
+
+Once the above are done:
+
+```bash
+npm create proto@latest myapp
+```
+
+Proto scaffolds the project, installs dependencies silently, and opens the iOS Simulator. You'll see the starter screen.
+
+That's it. You're ready.

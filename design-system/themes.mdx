@@ -1,0 +1,46 @@
+---
+title: "Themes"
+description: "Liquid Glass, Material You, and Base."
+---
+
+Prototo ships with three themes. Pick one when you run `proto design`. Switch any time with a prompt.
+
+## Liquid Glass
+
+Apple's iOS 26 design language. Translucent surfaces, blur effects, glass cards, the navigation bar as frosted glass.
+
+This is the right choice if you're designing for iOS 26 and want to feel what Liquid Glass actually looks like on a real device — without a single line of SwiftUI.
+
+Prototo uses Apple's native `glassEffect` modifier through the SwiftUI bridge, so this is the real Apple Liquid Glass material — not an approximation. It renders correctly in the iOS Simulator (the MVP canvas).
+
+## Material You
+
+Google's design language for Android. Dynamic colour, rounded surfaces, Material 3 components.
+
+Right for Android-first teams or cross-platform projects.
+
+## Base
+
+No theme. Clean defaults. Useful when you're bringing your own component library and don't want any preset styling.
+
+## Native iOS first
+
+Even within a theme, Prototo leans on what Apple already ships natively whenever possible:
+
+| Surface | What Prototo uses |
+|---|---|
+| Bottom tab bar | Native `UITabBar` via expo-router native tabs |
+| Icons | SF Symbols (real, not approximations) |
+| System buttons | Apple's native button via the SwiftUI bridge |
+| Form rows + sections | Apple's Form and Section |
+| Toggles | Native SwiftUI Toggle on iOS |
+| Liquid Glass | Apple's `glassEffect` modifier |
+
+The prototype feels like the real OS because it is using the real OS components — not lookalikes.
+
+## Switching themes
+
+```
+update DESIGN.md — switch the theme to Material You
+and update the colour palette accordingly
+```
