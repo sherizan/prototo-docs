@@ -9,6 +9,9 @@ export default withNextra({
     }
   },
   async redirects() {
-    return [{ source: '/introduction', destination: '/', permanent: true }]
+    return [
+      { source: '/introduction', destination: '/', permanent: true },
+      { source: '/favicon.ico', destination: '/favicon.svg', permanent: false }
+    ]
   }
 })

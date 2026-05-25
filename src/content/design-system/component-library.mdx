@@ -5,19 +5,6 @@ description: "Use Prototo's built-in components or bring your team's."
 
 Every screen Claude Code generates is built from components. The library it uses lives in DESIGN.md. Switch it any time with a prompt.
 
-## Supported libraries
-
-| Library | Package | Install |
-|---|---|---|
-| Prototo (default) | built-in | none |
-| Tamagui | `@tamagui/core` | auto |
-| Gluestack UI | `@gluestack-ui/themed` | auto |
-| React Native Paper | `react-native-paper` | auto |
-| NativeWind | `nativewind` | auto |
-| Custom | your package | one command |
-
-For the four known libraries, `proto design` runs the install silently when you pick one. For Custom, you enter the package name and Proto handles the rest.
-
 ## Prototo built-in components
 
 These are always available as a fallback, even when another library is selected:
@@ -52,7 +39,19 @@ Proto installs the package. Claude Code rewrites screens with the new imports. T
 
 ## Custom or proprietary libraries
 
-For a library Claude Code may not know well, add 2–3 component examples to DESIGN.md with import paths, props, and usage patterns for buttons, cards, and other primitives.
+For a library Claude Code may not know well, add 2–3 component examples to DESIGN.md:
+
+```text
+## Examples
+
+// Primary button
+import { Button } from '@acme/mobile-components';
+&lt;Button variant="primary" onPress={handler}&gt;Label&lt;/Button&gt;
+
+// Card surface
+import { Surface } from '@acme/mobile-components';
+&lt;Surface elevated padding="md"&gt;content&lt;/Surface&gt;
+```
 
 Claude Code reads these and follows the exact API pattern when generating screens. Two or three examples cover most libraries — Claude extrapolates the rest.
 

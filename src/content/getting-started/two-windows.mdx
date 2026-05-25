@@ -18,7 +18,7 @@ iOS Simulator         ← the canvas
 ## Window 1 — Prototo
 
 ```bash
-proto start
+npx proto start
 ```
 
 This starts Prototo and opens the iOS Simulator. Leave this window running. You never type in it again.
@@ -43,11 +43,11 @@ Tap to test interactions. Watch it update after every prompt. When it looks righ
 ## The complete workflow
 
 ```
-proto start          → Simulator opens       (Window 1, leave it)
+npx proto start      → Simulator opens       (Window 1, leave it)
 cd myapp && claude   → Claude Code opens     (Window 2, stay here)
 describe a screen    → Simulator updates     (look here)
 describe a change    → Simulator updates     (look here)
-proto share          → QR code appears       (send to stakeholders)
+proto share          → QR code appears       (coming soon, WIP)
 ```
 
 Five lines. No more complexity than this.

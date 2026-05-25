@@ -7,7 +7,7 @@ export function Logo() {
         alt="Proto"
         width={76}
         height={15}
-        className="dark:hidden"
+        className="logo-light"
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -15,7 +15,7 @@ export function Logo() {
         alt="Proto"
         width={76}
         height={15}
-        className="hidden dark:block"
+        className="logo-dark"
       />
     </>
   )

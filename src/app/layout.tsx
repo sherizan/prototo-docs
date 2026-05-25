@@ -1,6 +1,5 @@
-import { DocsShell } from '@/components/docs-shell'
-import { Head } from 'nextra/components'
 import type { Metadata } from 'next'
+import { Head } from 'nextra/components'
 import type { ReactNode } from 'react'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
@@ -19,14 +18,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head
         color={{
-          hue: 174,
-          saturation: 100,
-          lightness: { light: 35, dark: 40 }
+          hue: 336,
+          saturation: 73,
+          lightness: { light: 66, dark: 72 }
+        }}
+        backgroundColor={{
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(24, 20, 22)'
         }}
       />
-      <body>
-        <DocsShell>{children}</DocsShell>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

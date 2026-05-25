@@ -1,9 +1,27 @@
 :root {
-  --nextra-primary-hue: 174deg;
-  --nextra-primary-saturation: 100%;
-  --nextra-primary-lightness: 35%;
+  --prototo-primary: #e86a9c;
+  --prototo-secondary: #f0e4e8;
+  --nextra-primary-hue: 336deg;
+  --nextra-primary-saturation: 73%;
+  --nextra-primary-lightness: 66%;
 }
 
 .dark {
-  --nextra-primary-lightness: 40%;
+  --nextra-primary-lightness: 72%;
+}
+
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
 }

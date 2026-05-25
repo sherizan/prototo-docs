@@ -44,9 +44,10 @@ docs/
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#00A090",
-    "light": "#00A090",
-    "dark": "#00A090"
+    "primary": "#E86A9C",
+    "secondary": "#F0E4E8",
+    "light": "#E86A9C",
+    "dark": "#E86A9C"
   },
   "topbarLinks": [
     { "name": "GitHub", "url": "https://github.com/[username]/proto" }
@@ -336,7 +337,7 @@ proto start          → Simulator opens       (Window 1, leave it)
 cd myapp && claude   → Claude Code opens     (Window 2, stay here)
 describe a screen    → Simulator updates     (look here)
 describe a change    → Simulator updates     (look here)
-proto share          → QR code appears       (send to stakeholders)
+proto share          → QR code appears       (coming soon, WIP)
 ```
 
 That's Proto. Five lines. No more complexity than this.
@@ -660,7 +661,7 @@ Edit Profile and Sign Out options
 
 ```
 run proto design — set the theme to Liquid Glass, 
-accent colour #00A090, app name My App
+accent colour #E86A9C, app name My App
 ```
 
 ```
