@@ -1,0 +1,55 @@
+---
+title: "The two-window model"
+description: "Two terminals and a Simulator. That is the whole product."
+---
+
+Prototo runs across two Terminal windows and the iOS Simulator. Once you understand this, the whole product makes sense.
+
+```
+You
+ │
+ ├── proto CLI       ← scaffolds, starts, manages everything hidden
+ │
+ └── Claude Code CLI ← the design tool
+
+iOS Simulator         ← the canvas
+```
+
+## Window 1 — Prototo
+
+```bash
+proto start
+```
+
+This starts Prototo and opens the iOS Simulator. Leave this window running. You never type in it again.
+
+## Window 2 — Claude Code
+
+```bash
+cd myapp
+claude
+```
+
+This is the design tool. Everything you describe here appears in the Simulator.
+
+Claude Code reads DESIGN.md before every generation — so it already knows your colours, typography, spacing, and component library. You never repeat context.
+
+## The Simulator
+
+This is the canvas. The only thing you look at.
+
+Tap to test interactions. Watch it update after every prompt. When it looks right, share it.
+
+## The complete workflow
+
+```
+proto start          → Simulator opens       (Window 1, leave it)
+cd myapp && claude   → Claude Code opens     (Window 2, stay here)
+describe a screen    → Simulator updates     (look here)
+describe a change    → Simulator updates     (look here)
+proto share          → QR code appears       (send to stakeholders)
+```
+
+Five lines. No more complexity than this.
+
+One prompt tool. One output surface. The paradigm stays clean — you never context-switch between design surfaces.

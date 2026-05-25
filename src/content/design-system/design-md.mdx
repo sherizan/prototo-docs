@@ -1,0 +1,97 @@
+---
+title: "DESIGN.md"
+description: "Source of truth for your prototype's design system."
+---
+
+DESIGN.md is not a code file. It is not a JSON config. It is a structured markdown document at the root of your project that captures every design decision in human language.
+
+It serves three audiences at once:
+
+1. **Claude Code** — reads it before every generation to stay on-brand automatically
+2. **You** — update it via prompts to evolve the design system
+3. **Engineers** — read it at handoff to understand the design decisions
+
+## Set up your design system
+
+Run this once per project:
+
+```bash
+proto design
+```
+
+Answer four questions:
+
+1. Which theme? (Liquid Glass / Material You / Base)
+2. Accent colour?
+3. Component library? (Proto, Tamagui, Gluestack UI, React Native Paper, NativeWind, or Custom)
+4. App name?
+
+Proto writes a complete DESIGN.md from your answers. For known libraries, it also installs the package silently.
+
+## What DESIGN.md contains
+
+```markdown
+# DESIGN.md
+> Source of truth for My App's design system.
+> Update by prompting Claude Code: "update DESIGN.md, change the accent to indigo"
+
+## App
+- Name: My App
+- Theme: liquidGlass
+- Platform: iOS
+
+## Component Library
+- Package: proto (built-in)
+- Import from: ../components/proto
+- Fallback: proto
+
+## Colour
+- Accent: #007AFF
+- Surface primary: rgba(255,255,255,0.72)
+- Surface card: rgba(255,255,255,0.60)
+- Surface nav: rgba(255,255,255,0.82)
+- Text primary: #000000
+- Text secondary: rgba(0,0,0,0.5)
+- Destructive: #FF3B30
+
+## Typography
+- Title: 34px / bold / tracking -0.4
+- Headline: 22px / semibold / tracking -0.4
+- Body: 17px / regular
+- Caption: 12px / regular
+- Label: 13px / medium
+
+## Spacing
+- xs: 4 / sm: 8 / md: 16 / lg: 24 / xl: 32
+
+## Shape
+- Card radius: 22
+- Button radius: 14
+- Modal radius: 44
+
+## Effects
+- Card blur: 20
+- Nav blur: 40
+- Modal blur: 60
+
+## Screens
+- Home (initial) — starter screen
+```
+
+## Update your design system with prompts
+
+Never edit DESIGN.md manually. Describe the change instead:
+
+```
+update DESIGN.md — change the accent colour to #5856D6
+and tighten the card radius to 16. Then regenerate the
+Home and Settings screens to reflect the changes.
+```
+
+Claude Code updates DESIGN.md, rewrites the affected screens using the new tokens, and the Simulator updates in ~15 seconds. No file was manually edited.
+
+## Why this matters at handoff
+
+DESIGN.md is also the handoff document. An engineer opens the project, reads DESIGN.md, reads the screens, and has a complete picture of every design decision and how it was implemented.
+
+There is no second spec to maintain. The design system and the implementation share one source.

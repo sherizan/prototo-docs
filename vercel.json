@@ -1,6 +1,1 @@
-{
-  "rewrites": [
-    { "source": "/", "destination": "https://prototo.mintlify.app" },
-    { "source": "/:match*", "destination": "https://prototo.mintlify.app/:match*" }
-  ]
-}
+{}
