@@ -5,5 +5,6 @@ export default {
   },
   prerequisites: 'Prerequisites',
   'two-windows': 'The two-window model',
-  'first-prototype': 'Your first prototype'
+  'first-prototype': 'Your first prototype',
+  'preview-on-iphone': 'Preview on iPhone'
 }
