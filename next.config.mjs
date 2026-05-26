@@ -11,6 +11,16 @@ export default withNextra({
   async redirects() {
     return [
       { source: '/introduction', destination: '/', permanent: true },
+      {
+        source: '/getting-started/install',
+        destination: '/getting-started/prerequisites',
+        permanent: true
+      },
+      {
+        source: '/getting-started',
+        destination: '/getting-started/prerequisites',
+        permanent: false
+      },
       { source: '/favicon.ico', destination: '/favicon.svg', permanent: false }
     ]
   }

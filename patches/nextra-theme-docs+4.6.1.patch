@@ -1,8 +1,21 @@
+diff --git a/node_modules/nextra-theme-docs/dist/components/breadcrumb.js b/node_modules/nextra-theme-docs/dist/components/breadcrumb.js
+index 3f090ec..9a6e5a0 100644
+--- a/node_modules/nextra-theme-docs/dist/components/breadcrumb.js
++++ b/node_modules/nextra-theme-docs/dist/components/breadcrumb.js
+@@ -30,7 +30,7 @@ const Breadcrumb = (t0) => {
+ };
+ function _temp(item, index, arr) {
+   const nextItem = arr[index + 1];
+-  const href = nextItem ? "frontMatter" in item ? item.route : item.children[0].route === nextItem.route ? "" : item.children[0].route : "";
++  const href = nextItem ? "frontMatter" in item ? item.route : item.children[0].route === nextItem.route ? item.route ?? "" : item.children[0].route : "";
+   const ComponentToUse = href ? NextLink : "span";
+   return /* @__PURE__ */ jsxs(Fragment, { children: [
+     index > 0 && /* @__PURE__ */ jsx(ArrowRightIcon, { height: "14", className: "x:shrink-0 x:rtl:rotate-180" }),
 diff --git a/node_modules/nextra-theme-docs/dist/layout.js b/node_modules/nextra-theme-docs/dist/layout.js
-index 57a511f..f365eb7 100644
+index 57a511f..bb56d69 100644
 --- a/node_modules/nextra-theme-docs/dist/layout.js
 +++ b/node_modules/nextra-theme-docs/dist/layout.js
-@@ -24,7 +24,7 @@ const Layout = (t0) => {
+@@ -27,7 +27,7 @@ const Layout = (t0) => {
      const {
        data: t12,
        error

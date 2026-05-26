@@ -17,7 +17,6 @@ export default async function SiteLayout({
             logo={<Logo />}
             logoLink="/"
             projectLink="https://github.com/sherizan/proto"
-            chatLink="https://x.com/sherizan"
           >
             <a
               href="https://prototo.app"
@@ -32,9 +31,6 @@ export default async function SiteLayout({
         footer={
           <Footer>
             <div className="x:flex x:gap-4">
-              <a href="https://x.com/sherizan" target="_blank" rel="noreferrer">
-                X
-              </a>
               <a
                 href="https://github.com/sherizan/proto"
                 target="_blank"

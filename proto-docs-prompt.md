@@ -90,7 +90,6 @@ docs/
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/[handle]",
     "github": "https://github.com/[username]/proto"
   }
 }
