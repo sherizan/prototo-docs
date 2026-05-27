@@ -1,0 +1,48 @@
+---
+title: Simulator
+description: "Screenshots, screen recordings, and rounded tap indicators in Apple's iOS Simulator."
+---
+
+These use Apple's **Simulator** app — the iPhone preview on your Mac. Click the Simulator window first so these shortcuts apply there, not in Terminal.
+
+## Screenshot
+
+Get to the screen you want, then:
+
+- **File → Save Screen** — or press **⌘S**
+- A preview appears beside the Simulator. It saves to your **Desktop** by default.
+- Hold **Option** while choosing **File → Save Screen** to pick a different folder.
+
+Full device resolution, ready for Slack, Figma, or slides.
+
+## Record a video
+
+Get to the starting screen, then:
+
+- **File → Record Screen** — or press **⌘R** (only when the Simulator window is focused, not the Prototo Terminal window)
+- Use the app — scroll, tap, navigate — while it records.
+- Stop with **File → Stop Recording**, or the stop button on the Simulator window.
+
+The video saves to your **Desktop**. Hold **Option** when you start recording to choose another folder. You can export as MP4 or animated GIF from the preview.
+
+<Note>
+**⌘R** in the Simulator records video. **R** in the Prototo Terminal window reloads your app. See [Keyboard shortcuts](/tips/shortcuts) — click the right window before you press the key.
+</Note>
+
+## Rounded tap indicator (for demos)
+
+When you record or present, it helps to show where you tap — a small **round circle** instead of the normal arrow cursor.
+
+With **Simulator** in focus (Mac menu bar):
+
+- **Features → Show Single Touch** — a circle follows each click
+
+On newer Xcode versions you may also find **Simulator → Settings… → Visual indicators → Show single touches**. Turn it on, then quit and reopen Simulator if the circle does not appear.
+
+Optional: **Features → Show Touch Indicators** — extra feedback while you click around.
+
+<Note>
+Simulator’s own **File → Record Screen** video sometimes **does not** include the round tap circle. If your saved video has no taps visible, record the Simulator window with macOS instead: press **⌘⇧5**, choose **Record Selected Portion**, drag around the phone preview, then record.
+</Note>
+
+For tap dots baked into the **phone screen** (useful on a physical iPhone too): in the simulated device open **Settings → Developer → Show Touches** (turn on **Developer Mode** under **Settings → Privacy & Security** first if iOS asks).

@@ -1,0 +1,30 @@
+---
+title: While you work
+description: "Day-to-day habits for prompting, fixing screens, and recovering when something sticks."
+---
+
+**Watch the Simulator, not Terminal.** After you prompt in Claude Code, the result appears on the iPhone preview. That is the only surface that matters.
+
+**Keep both windows open.** Do not quit the window running `npx proto start`. If you close it, follow [Open Prototo again](/tips/reopening).
+
+**You do not repeat your design system.** Claude Code reads DESIGN.md every time. Describe the screen — layout, content, feel — not colours and fonts you already chose during setup.
+
+**Be specific.** "Add a card" gets a guess. "Add a card with a glass background, merchant name at the top, amount large in the centre" gets what you pictured. More examples in [How to prompt Prototo](/prompting/prompt-guide).
+
+**Change screens in plain language.** You do not edit files. Say what to change: "on the settings screen, move sign out to the bottom and make it red."
+
+**If a screen looks broken, ask Claude to fix it.** In the Claude Code window:
+
+```
+fix any errors in the Settings screen
+```
+
+Replace `Settings` with your screen name. You do not need to read the error.
+
+**When nothing else works, reset.** In your project folder (either Terminal window):
+
+```bash
+proto reset
+```
+
+This restarts the environment and reopens the Simulator. It fixes most stuck states. Details in [Troubleshooting](/reference/troubleshooting).

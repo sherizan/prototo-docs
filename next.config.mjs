@@ -21,6 +21,21 @@ export default withNextra({
         destination: '/getting-started/prerequisites',
         permanent: false
       },
+      {
+        source: '/getting-started/tips',
+        destination: '/tips/reopening',
+        permanent: true
+      },
+      {
+        source: '/tips',
+        destination: '/tips/reopening',
+        permanent: false
+      },
+      {
+        source: '/reference/cli',
+        destination: '/reference/troubleshooting',
+        permanent: false
+      },
       { source: '/favicon.ico', destination: '/favicon.svg', permanent: false }
     ]
   }

@@ -1,0 +1,34 @@
+---
+title: Open Prototo again
+description: "Start the same prototype again after you close Terminal or come back to your Mac."
+---
+
+When you come back to your Mac and want to keep working on the same prototype:
+
+1. Open **Terminal**.
+2. Go to your project folder (replace `myapp` with your folder name):
+
+```bash
+cd myapp
+```
+
+3. Start Prototo — the Simulator opens:
+
+```bash
+npx proto start
+```
+
+4. Open a **second** Terminal tab or window. Go to the same folder and start Claude Code:
+
+```bash
+cd myapp
+claude
+```
+
+Leave the first window running Prototo. Do all your prompting in the second window. Watch the Simulator.
+
+That is the same setup as [The two-window model](/getting-started/two-windows). You are not starting from scratch — just waking it back up.
+
+<Note>
+On Mac, use **File → New Tab** in Terminal (or **⌘T**) for the second window. Run `cd myapp` in that tab before `claude`.
+</Note>

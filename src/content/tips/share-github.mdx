@@ -1,0 +1,150 @@
+---
+title: Share via GitHub
+description: "Send your prototype to someone else by pushing the project to GitHub so they can clone and run it."
+---
+
+Prototo does not have built-in sharing yet (`proto share` is coming). Until then, you can put your project on **GitHub** so someone else can download it and run the same prototype on their Mac.
+
+This is a workaround, not a polished share link. The other person needs [Prerequisites](/getting-started/prerequisites) installed (Node.js, Xcode, Claude Code) and a few Terminal commands. It works well for teammates, engineers, or stakeholders who are comfortable on a Mac.
+
+## What gets shared
+
+Your project folder holds everything that matters: screens, `DESIGN.md`, `CLAUDE.md`, and project config. You upload that folder to GitHub. You do **not** upload `node_modules` (dependencies are reinstalled on the other Mac).
+
+If the folder already has a `.gitignore` file, leave it as is. If not, create one in your project root with:
+
+```
+node_modules
+```
+
+## One-time setup (your Mac)
+
+### 1. Install Git
+
+Open Terminal and run:
+
+```bash
+git --version
+```
+
+If you see a version number, Git is installed. If not, install Xcode command line tools (same step as in [Prerequisites](/getting-started/prerequisites)):
+
+```bash
+xcode-select --install
+```
+
+### 2. Create a GitHub account
+
+Sign up free at [github.com](https://github.com). Remember your username — you will need it below.
+
+### 3. Tell Git who you are (once per Mac)
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+Use the same email as your GitHub account if you can.
+
+## Push your prototype (you)
+
+Replace `myapp` with your project folder name and `your-username` / `my-prototype` with your GitHub username and repo name.
+
+**1. Go to your project**
+
+```bash
+cd myapp
+```
+
+**2. Start Git in this folder** (skip if you already use Git here)
+
+```bash
+git init
+```
+
+**3. Create the repo on GitHub**
+
+- Open [github.com/new](https://github.com/new)
+- Name it (e.g. `my-prototype`)
+- Choose **Private** if the design is sensitive, **Public** if anyone with the link should clone it
+- Do **not** add a README, `.gitignore`, or license — leave the repo empty
+- Click **Create repository**
+
+**4. Add files and push**
+
+```bash
+git add .
+git commit -m "Share prototype"
+git branch -M main
+git remote add origin https://github.com/your-username/my-prototype.git
+git push -u origin main
+```
+
+The first `git push` may ask you to sign in to GitHub in the browser, or for a username and password. GitHub no longer accepts your account password in Terminal — use a **Personal Access Token** as the password, or complete sign-in when the browser opens. Create a token under GitHub **Settings → Developer settings → Personal access tokens** if you need one.
+
+**5. Send the link**
+
+Copy the repo URL from GitHub (e.g. `https://github.com/your-username/my-prototype`) and send it to the other person. For a private repo, add them under **Settings → Collaborators** on GitHub so they can clone it.
+
+## Run someone else's prototype (them)
+
+They need the same Mac setup as you: Node.js, Xcode, and Claude Code. See [Prerequisites](/getting-started/prerequisites).
+
+**1. Download the project**
+
+```bash
+cd ~
+git clone https://github.com/your-username/my-prototype.git
+cd my-prototype
+```
+
+**2. Install dependencies**
+
+```bash
+npm install
+```
+
+**3. Start Prototo and Claude Code**
+
+Same as [Open Prototo again](/tips/reopening):
+
+```bash
+npx proto start
+```
+
+In a second Terminal tab, in the same folder:
+
+```bash
+cd ~/my-prototype
+claude
+```
+
+They see your screens in the Simulator and can prompt changes in their own Claude Code session.
+
+## Updating after you change the prototype
+
+When you change screens and want to send the latest version:
+
+```bash
+cd myapp
+git add .
+git commit -m "Update prototype"
+git push
+```
+
+Tell them to pull the latest:
+
+```bash
+cd my-prototype
+git pull
+```
+
+Then press **R** in the Prototo window or run `proto reset` if the Simulator does not refresh. See [Keyboard shortcuts](/tips/shortcuts) and [Troubleshooting](/reference/troubleshooting).
+
+## Easier option: GitHub Desktop
+
+If Terminal Git feels heavy, install [GitHub Desktop](https://desktop.github.com/). You can add your project folder, commit, and push with buttons instead of commands. The other person can still clone with `git clone` in Terminal, or use Desktop themselves.
+
+<Note>
+Do not commit API keys, `.env` files with secrets, or personal data. If you are unsure, use a **private** repository and only invite people you trust.
+</Note>
