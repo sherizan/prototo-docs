@@ -6,26 +6,32 @@ description: Install the Prototo iPhone app and run your prototype on a real dev
 Simulator only gets you so far. A prototype that lives in your hand feels different than one on your trackpad — real iOS 26 Liquid Glass, system haptics, real gestures, real one-handed reach. Test it the way your users will actually use it.
 
 <Note>
-You won't find Prototo on the App Store. It's a space for your ideas to live before they're ready for the world — half-formed, in-progress, just for you. That kind of thing doesn't belong on a public shelf. So we'll get it onto your iPhone a different way. Takes about two minutes.
+You won't find Prototo on the App Store. It's a space for your ideas to live before they're ready for the world — half-formed, in-progress, just for you. That kind of thing doesn't belong on a public shelf. So we'll get it onto your iPhone a different way: a quick two-step install, no account needed.
 </Note>
 
-## Step 1 — Get Prototo onto your iPhone
+## Step 1 — Register your device (one time)
 
-Open this page on your iPhone if you're reading on desktop, then tap the button below. It'll take you to the install page.
+Open this page on your iPhone if you're reading on desktop, then tap the button below.
 
-[Install Prototo →](https://prototo.app/install/ios)
+[Register device →](https://prototo.app/install/ios)
 
-## Step 2 — Register your device (first time only)
+Tap **Register this device** and follow the iOS prompt — Settings will open automatically, tap **Allow**, then **Install**. You'll land on a **"device is ready"** screen. That's expected — it only confirms your device is registered.
 
-On your first install, you'll be prompted to set up your device. Tap **Register this device** and follow the iOS prompt — Settings will open automatically, tap **Allow**, then **Install**.
+<Note>
+Don't tap **builds page** on that screen. That's the project dashboard and it asks you to sign in — you don't need an Expo account. Just come back here and continue to Step 2.
+</Note>
 
 Takes about 30 seconds. You only do this once.
 
-## Step 3 — Install + preview your prototype
+## Step 2 — Install the Prototo app
 
-Back at the install page, tap **Install Prototo** — the app downloads and appears on your home screen.
+Open the install link on your iPhone and tap **Install** on the build page — no sign-in. The app downloads and appears on your home screen.
 
-Then, in your Prototo project on Mac, run:
+[Install the app →](https://prototo.app/install/ios/app)
+
+## Step 3 — Preview your prototype
+
+In your Prototo project on Mac, run:
 
 ```bash
 npx proto start
@@ -37,4 +43,5 @@ Open Camera on your iPhone, point it at the QR in your terminal, tap the notific
 
 - **Same Wi-Fi.** iPhone and Mac on the same network when previewing.
 - **iOS 26+.** Required for Liquid Glass and other system materials.
-- **First-time install: ~10–15 min wait** after registering, while a fresh build is signed for your device. The Install button activates automatically when ready.
+- **No sign-in needed.** The install link is public. If a page asks you to log in, you tapped **builds page** by mistake — back out and use the install link.
+- **Just registered a new device?** It may need a fresh build before the app will install. Give it a few minutes, then open the install link again.
