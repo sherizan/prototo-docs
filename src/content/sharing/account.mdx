@@ -1,0 +1,47 @@
+---
+title: "Your account"
+description: "Sign in once so your shares are saved, then manage them at prototo.app."
+---
+
+You need a free account to share live previews. Building locally never needs an account — only sharing does.
+
+## Sign in
+
+```bash
+proto login
+```
+
+This opens your browser to sign in. Use **email** (you get a magic link) or **Google**. Once you're signed in, you'll see a confirmation in the browser:
+
+```
+You're signed in
+Head back to your terminal — you can close this tab.
+```
+
+Back in the terminal:
+
+```
+You're signed in.
+```
+
+That's it. You don't usually run `proto login` directly — [`proto share`](/sharing/share-link) and [`proto record`](/studio/recording) sign you in automatically the first time you use them.
+
+## Manage your shares
+
+Everything lives at [prototo.app/account](https://prototo.app/account):
+
+- Your active shares and when each link expires
+- How much live preview you've used this month
+- Your current plan, and the option to upgrade
+
+## Sign out
+
+Prototo stores your sign-in in a single file on your Mac. To sign out, delete it:
+
+```bash
+rm ~/.prototo/api-token.json
+```
+
+<Note>
+There's no `proto logout` command yet — removing that file is how you sign out. The next `proto share` or `proto login` signs you back in.
+</Note>
