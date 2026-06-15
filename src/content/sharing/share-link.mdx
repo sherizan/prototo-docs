@@ -1,0 +1,48 @@
+---
+title: "Share a live preview"
+description: "Run proto share and send a link. They try the real prototype in their browser."
+---
+
+`proto share` turns your running prototype into a link. Whoever you send it to opens the real thing in their browser and taps through it like a real app. No install, no Xcode, no Mac required on their side.
+
+## Share it
+
+Keep your Simulator running ([Window 1](/getting-started/two-windows)), then in your project run:
+
+```bash
+proto share
+```
+
+The first time, it signs you in so your shares are saved to your account (see [Your account](/sharing/account)). Then it publishes your prototype and prints your link:
+
+```
+Your prototype is live
+  https://prototo.app/p/abc123xyz
+
+Scan to open on any device:
+  ▒▒▒▒▒▒▒
+  ▒ QR  ▒
+  ▒▒▒▒▒▒▒
+```
+
+Send the link to anyone, or have them scan the QR code to open it on a phone. **Keep Prototo running while they view it** — the live preview streams from your session.
+
+## Name your share
+
+By default Prototo asks what to call you on the share. To set it up front:
+
+```bash
+proto share --as "Sheri"
+```
+
+## Re-share after changes
+
+Run `proto share` again any time. Your project keeps the same link, so you can resend the original URL and people see your latest version.
+
+<Note>
+Free accounts can share **one prototype at a time**, with **30 minutes** of live preview a month, and links that last **7 days**. If you hit the limit, Prototo opens your account page so you can upgrade. See [Plans and limits](/sharing/plans).
+</Note>
+
+## Prefer to hand off the files?
+
+If the other person is on a Mac and wants the actual project to keep building, [Share via GitHub](/sharing/share-github) instead.

@@ -6,6 +6,5 @@ export default {
   reopening: 'Open Prototo again',
   'while-you-work': 'While you work',
   simulator: 'Simulator',
-  shortcuts: 'Keyboard shortcuts',
-  'share-github': 'Share via GitHub'
+  shortcuts: 'Keyboard shortcuts'
 }
