@@ -8,7 +8,7 @@ You need a free account to share live previews. Building locally never needs an 
 ## Sign in
 
 ```bash
-proto login
+npx proto login
 ```
 
 This opens your browser to sign in. Use **email** (you get a magic link) or **Google**. Once you're signed in, you'll see a confirmation in the browser:
@@ -24,7 +24,7 @@ Back in the terminal:
 You're signed in.
 ```
 
-That's it. You don't usually run `proto login` directly — [`npx proto share`](/sharing/share-link) and [`npx proto record`](/studio/recording) sign you in automatically the first time you use them.
+That's it. You don't usually run `npx proto login` directly — [`npx proto share`](/sharing/share-link) and [`npx proto record`](/studio/recording) sign you in automatically the first time you use them.
 
 ## Manage your shares
 
@@ -43,5 +43,5 @@ rm ~/.prototo/api-token.json
 ```
 
 <Note>
-There's no `proto logout` command yet — removing that file is how you sign out. The next `npx proto share` or `proto login` signs you back in.
+There's no `proto logout` command yet — removing that file is how you sign out. The next `npx proto share` or `npx proto login` signs you back in.
 </Note>

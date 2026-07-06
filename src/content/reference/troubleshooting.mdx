@@ -9,17 +9,17 @@ The rule: no error shown to you requires engineering knowledge to interpret. Whe
 
 | What you see | What to do |
 |---|---|
-| A component couldn't be found | Run: `proto reset` |
+| A component couldn't be found | Run: `npx proto reset` |
 | A screen has an error | Ask Claude Code: `fix any errors in the [ScreenName] screen` |
 | Prototo is already running | Close the other terminal window first |
 | Prototo needs to update | Run: `proto update` |
 | Can't reach your device | Check you're on the same WiFi |
-| Something went wrong | Run: `proto reset` |
+| Something went wrong | Run: `npx proto reset` |
 
-## proto reset — the escape hatch
+## The escape hatch: npx proto reset
 
 ```bash
-proto reset
+npx proto reset
 ```
 
 This fixes 90% of issues. Silently it kills the bundler, clears caches, and restarts the environment with the Simulator open.
@@ -48,7 +48,7 @@ xcode-select --install
 Then try:
 
 ```bash
-proto reset
+npx proto reset
 ```
 
 ## Claude Code isn't reading my design system

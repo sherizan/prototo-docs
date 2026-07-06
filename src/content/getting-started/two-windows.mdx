@@ -1,21 +1,28 @@
 ---
-title: "The two-window model"
-description: "Two terminals and a Simulator. That is the whole product."
+title: "One window"
+description: "The Prototo app: Claude on the left, a live iPhone on the right."
 ---
 
-Prototo runs across two Terminal windows and the iOS Simulator. Once you understand this, the whole product makes sense.
+Prototo Desktop puts the whole product in one window. Claude Code on the left. A live iPhone on the right. Publish and Record buttons up top.
+
+[Download Prototo for Mac](https://prototo.app/download), open it, and create a project. That is the setup.
 
 ```
-You
- │
- ├── proto CLI       ← scaffolds, starts, manages everything hidden
- │
- └── Claude Code CLI ← the design tool
-
-iOS Simulator         ← the canvas
+Prototo Desktop (one window)
+ ├── Claude terminal    ← the design tool (left pane)
+ ├── live iPhone        ← the canvas (right pane)
+ └── Publish · Record   ← share a live link, record a clip
 ```
 
-## Window 1 — Prototo
+Describe a screen in the terminal. Watch it appear on the iPhone beside it. When it looks right, click **Publish** for a live link anyone can open in their browser, or **Record** to send a clip to Studio.
+
+The app keeps everything else out of sight: it starts Prototo for you, opens the Simulator hidden, and reconnects your last project when you come back.
+
+## The terminal way (two windows)
+
+Terminal pro? The same product runs as two Terminal windows and the iOS Simulator.
+
+### Window 1 — Prototo
 
 ```bash
 npx proto start
@@ -23,7 +30,7 @@ npx proto start
 
 This starts Prototo and opens the iOS Simulator. Leave this window running. You never type in it again.
 
-## Window 2 — Claude Code
+### Window 2 — Claude Code
 
 ```bash
 cd myapp
@@ -32,24 +39,16 @@ claude
 
 This is the design tool. Everything you describe here appears in the Simulator.
 
-Claude Code reads DESIGN.md before every generation — so it already knows your colours, typography, spacing, and component library. You never repeat context.
+Claude Code reads DESIGN.md before every generation, so it already knows your colours, typography, spacing, and component library. You never repeat context.
 
-## The Simulator
-
-This is the canvas. The only thing you look at.
-
-Tap to test interactions. Watch it update after every prompt. When it looks right, run `npx proto share` to get a live-preview link anyone can open in their browser. See [Share a live preview](/sharing/share-link).
-
-## The complete workflow
+### The complete terminal workflow
 
 ```
 npx proto start      → Simulator opens       (Window 1, leave it)
 cd myapp && claude   → Claude Code opens     (Window 2, stay here)
 describe a screen    → Simulator updates     (look here)
 describe a change    → Simulator updates     (look here)
-npx proto share          → send a live link      (see Share a live preview)
+npx proto share      → send a live link      (see Share a live preview)
 ```
 
-Five lines. No more complexity than this.
-
-One prompt tool. One output surface. The paradigm stays clean — you never context-switch between design surfaces.
+Either way, the paradigm stays clean: one prompt surface, one output surface. You never context-switch between design tools.

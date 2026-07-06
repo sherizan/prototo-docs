@@ -5,13 +5,15 @@ description: "Day-to-day habits for prompting, fixing screens, and recovering wh
 
 **Watch the Simulator, not Terminal.** After you prompt in Claude Code, the result appears on the iPhone preview. That is the only surface that matters.
 
-**Keep both windows open.** Do not quit the window running `npx proto start`. If you close it, follow [Open Prototo again](/tips/reopening).
+**Keep it running.** In Prototo Desktop, just keep the app open. In the terminal flow, do not quit the window running `npx proto start`. If you close it, follow [Open Prototo again](/tips/reopening).
 
 **You do not repeat your design system.** Claude Code reads DESIGN.md every time. Describe the screen — layout, content, feel — not colours and fonts you already chose during setup.
 
 **Be specific.** "Add a card" gets a guess. "Add a card with a glass background, merchant name at the top, amount large in the centre" gets what you pictured. More examples in [How to prompt Prototo](/prompting/prompt-guide).
 
 **Change screens in plain language.** You do not edit files. Say what to change: "on the settings screen, move sign out to the bottom and make it red."
+
+**Claude checks its own work.** After each screen it writes, Claude takes a screenshot of the live iPhone, type-checks the project, and reads the current errors itself. If you change the navigation (tabs, root layout), it can restart the app on its own too. You rarely need to relay what you see.
 
 **If a screen looks broken, ask Claude to fix it.** In the Claude Code window:
 
@@ -21,10 +23,10 @@ fix any errors in the Settings screen
 
 Replace `Settings` with your screen name. You do not need to read the error.
 
-**When nothing else works, reset.** In your project folder (either Terminal window):
+**When nothing else works, reset.** In Prototo Desktop, click **Reload** above the iPhone. In the terminal flow, run this in your project folder:
 
 ```bash
-proto reset
+npx proto reset
 ```
 
 This restarts the environment and reopens the Simulator. It fixes most stuck states. Details in [Troubleshooting](/reference/troubleshooting).
