@@ -1,28 +1,24 @@
 ---
 title: Preview on iPhone
-description: See your prototype on a real iPhone by opening a share link in Safari.
+description: Run your prototype on a real iPhone with the free Prototo app.
 ---
 
 Simulator only gets you so far. A prototype that lives in your hand feels different than one on your trackpad: real iOS 26 Liquid Glass, system haptics, real gestures, real one-handed reach. Test it the way your users will actually use it.
 
-<Note>
-The Prototo iPhone app is coming to the App Store. Until then, open a **share link** in Safari on your iPhone. Nothing to install.
-</Note>
+First, get the free **[Prototo app](https://apps.apple.com/app/id6772877748)** from the App Store on your iPhone and sign in.
 
-## Open a share link in Safari (no install)
+## Live preview while you build
 
-From your project on Mac, run:
+While `proto start` is running (Prototo Desktop runs it for you), your terminal shows a QR code. In the Prototo app, tap **Scan** and point it at that QR. Your prototype loads on the phone and picks up changes as you keep describing screens on the Mac.
 
-```bash
-npx proto share
-```
+- **Keep Prototo running on your Mac.** This preview is your live session.
+- **Same Wi-Fi.** iPhone and Mac on the same network.
 
-Prototo prints a link and a QR code. Point your iPhone camera at the QR, or send the link to yourself and open it, and your prototype loads in the browser. Tap through it like a real app. No account, no build, no waiting on Apple.
+## Published preview
 
-Keep Prototo running while you view it: the preview streams from your session. Full details in [Share a live preview](/sharing/share-link).
+Run `npx proto share` (or click **Publish** in Prototo Desktop) and open the link on your phone: tap it, scan the QR with the camera, or paste it into **Open a link** in the app. This one is published to the cloud, so it works from anywhere and keeps working after you close Prototo. Details in [Share your prototype](/sharing/share-link).
 
 ## A few notes
 
-- **Keep Prototo running on your Mac.** The preview streams from your active session.
-- **Same Wi-Fi.** iPhone and Mac on the same network when viewing a share link.
 - **iOS 26+.** Required for Liquid Glass and other system materials.
+- The same app is what people you [share with](/sharing/share-link) use to view your prototypes.

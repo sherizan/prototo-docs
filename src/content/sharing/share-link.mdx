@@ -1,19 +1,19 @@
 ---
-title: "Share a live preview"
-description: "Run npx proto share and send a link. They try the real prototype in their browser."
+title: "Share your prototype"
+description: "Run npx proto share and send a link. They run the real prototype natively on their iPhone."
 ---
 
-`npx proto share` turns your running prototype into a link. Whoever you send it to opens the real thing in their browser and taps through it like a real app. No install, no Xcode, no Mac required on their side.
+`npx proto share` turns your prototype into a link. Whoever you send it to opens it with the free **Prototo app** on their iPhone and runs the real thing natively, taps, animations, and all. No Mac, no Xcode, no code on their side.
 
 ## In Prototo Desktop: click Publish
 
-Click the **Publish** button in the top right. That is the whole flow: Prototo publishes your prototype and shows the link and QR code right in the app, with a Copy button.
+Click the **Publish** button in the top right. That is the whole flow: Prototo publishes your prototype and shows the link and QR code right in the app, with a Copy button. Closed the dialog? The QR button next to Publish brings it back any time.
 
 ![The Publish panel in Prototo Desktop: QR code, share link, and Copy button over the live iPhone preview](/desktop/publish-panel.png)
 
 ## In the terminal
 
-Keep your Simulator running ([Window 1](/getting-started/two-windows)), then in your project run:
+In your project run:
 
 ```bash
 npx proto share
@@ -31,11 +31,20 @@ Scan to open on any device:
   ▒▒▒▒▒▒▒
 ```
 
-Send the link to anyone, or have them scan the QR code to open it on a phone. **Keep Prototo running while they view it** — the live preview streams from your session.
+Your prototype is published to the cloud, so the link keeps working even after you close Prototo.
+
+## What the other person does
+
+1. **Get the free Prototo app** from the [App Store](https://apps.apple.com/app/id6772877748) and sign in. Takes a minute, once.
+2. Open your prototype any of three ways: **tap the link**, **scan the QR code** with the iPhone camera, or copy the link and use **Open a link** inside the app.
+
+The prototype downloads in a few seconds and runs natively on their device.
+
+If they open the link in a regular browser instead, the page walks them through getting the app.
 
 ## Name your share
 
-By default Prototo asks what to call you on the share. To set it up front:
+Prototo asks what to call you the first time and remembers it. To set it up front:
 
 ```bash
 npx proto share --as "Sheri"
@@ -46,7 +55,7 @@ npx proto share --as "Sheri"
 Run `npx proto share` again any time. Your project keeps the same link, so you can resend the original URL and people see your latest version.
 
 <Note>
-Free accounts can share **one prototype at a time**, with **30 minutes** of live preview a month, and links that last **7 days**. If you hit the limit, Prototo opens your account page so you can upgrade. See [Plans and limits](/sharing/plans).
+Free accounts can share **3 prototypes at a time**, with links that last **7 days**. If you hit the limit, Prototo opens your account page so you can upgrade or free a slot. See [Plans and limits](/sharing/plans).
 </Note>
 
 ## Prefer to hand off the files?

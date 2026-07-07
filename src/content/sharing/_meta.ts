@@ -3,7 +3,7 @@ export default {
     title: 'Sharing',
     display: 'hidden'
   },
-  'share-link': 'Share a live preview',
+  'share-link': 'Share your prototype',
   account: 'Your account',
   plans: 'Plans and limits',
   'share-github': 'Share via GitHub'
