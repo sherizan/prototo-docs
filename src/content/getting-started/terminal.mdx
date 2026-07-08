@@ -1,0 +1,39 @@
+---
+title: "The terminal flow"
+description: "The legacy two-window flow: Prototo in one Terminal, Claude Code in another."
+---
+
+This is the original way to run Prototo, kept for terminal pros. [Prototo Desktop](/getting-started/prototo-desktop) is the recommended flow now; everything below still works.
+
+The same product runs as two Terminal windows and the iOS Simulator.
+
+## Window 1 — Prototo
+
+```bash
+npx proto start
+```
+
+This starts Prototo and opens the iOS Simulator. Leave this window running. You never type in it again.
+
+## Window 2 — Claude Code
+
+```bash
+cd myapp
+claude
+```
+
+This is the design tool. Everything you describe here appears in the Simulator.
+
+Claude Code reads DESIGN.md before every generation, so it already knows your colours, typography, spacing, and component library. You never repeat context.
+
+## The complete terminal workflow
+
+```
+npx proto start      → Simulator opens       (Window 1, leave it)
+cd myapp && claude   → Claude Code opens     (Window 2, stay here)
+describe a screen    → Simulator updates     (look here)
+describe a change    → Simulator updates     (look here)
+npx proto share      → send a share link     (see Share your prototype)
+```
+
+Either way, the paradigm stays clean: one prompt surface, one output surface. You never context-switch between design tools.

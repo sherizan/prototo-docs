@@ -17,6 +17,11 @@ export default withNextra({
         permanent: true
       },
       {
+        source: '/getting-started/two-windows',
+        destination: '/getting-started/prototo-desktop',
+        permanent: true
+      },
+      {
         source: '/getting-started',
         destination: '/getting-started/prerequisites',
         permanent: false
