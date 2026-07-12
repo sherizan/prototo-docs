@@ -1,5 +1,6 @@
 :root {
   --prototo-primary: #e86a9c;
+  --prototo-primary-strong: #c83c79; /* white text on pink clears WCAG AA (4.8:1) */
   --prototo-secondary: #f0e4e8;
   --nextra-primary-hue: 336deg;
   --nextra-primary-saturation: 73%;
