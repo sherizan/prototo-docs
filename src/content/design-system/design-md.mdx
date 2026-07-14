@@ -7,7 +7,7 @@ DESIGN.md is not a code file. It is not a JSON config. It is a structured markdo
 
 It serves three audiences at once:
 
-1. **Claude Code** — reads it before every generation to stay on-brand automatically
+1. **Your coding agent**: reads it before every generation to stay on-brand automatically
 2. **You** — update it via prompts to evolve the design system
 3. **Engineers** — read it at handoff to understand the design decisions
 
@@ -33,7 +33,7 @@ Proto writes a complete DESIGN.md from your answers. For known libraries, it als
 ```markdown
 # DESIGN.md
 > Source of truth for My App's design system.
-> Update by prompting Claude Code: "update DESIGN.md, change the accent to indigo"
+> Update by prompting your agent: "update DESIGN.md, change the accent to indigo"
 
 ## App
 - Name: My App
@@ -88,7 +88,7 @@ and tighten the card radius to 16. Then regenerate the
 Home and Settings screens to reflect the changes.
 ```
 
-Claude Code updates DESIGN.md, rewrites the affected screens using the new tokens, and the Simulator updates in ~15 seconds. No file was manually edited.
+Your agent updates DESIGN.md, rewrites the affected screens using the new tokens, and the Simulator updates in ~15 seconds. No file was manually edited.
 
 ## Why this matters at handoff
 

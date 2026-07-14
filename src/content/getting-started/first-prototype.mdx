@@ -3,20 +3,24 @@ title: "Your first prototype"
 description: "Describe it. Watch it appear on your device."
 ---
 
-In **Prototo Desktop**, open your project and you are already there: Claude Code is running in the left pane, your iPhone is live on the right.
+In **Prototo Desktop**, open your project and you are already there: your coding agent (Claude Code or Codex) is running in the left pane, your iPhone is live on the right.
+
+<Note>
+Picked Codex? The first time it opens a project it asks whether you trust the folder. Say yes so it can use Prototo's preview tools.
+</Note>
 
 In the **terminal flow**, open a second Terminal window and navigate to your project:
 
 ```bash
 cd myapp
-claude
+claude   # or: codex
 ```
 
-Either way, you're now in Claude Code inside your Proto project. Claude Code has already read your DESIGN.md and CLAUDE.md — it knows your design system, your component library, and the rules for generating screens. You don't repeat yourself.
+Either way, your agent is now running inside your Proto project. It has already read your DESIGN.md and AGENTS.md. It knows your design system, your component library, and the rules for generating screens. You don't repeat yourself.
 
 ## Describe your first screen
 
-Type this into Claude Code:
+Type this into the agent:
 
 ```
 add a settings screen with notification and dark mode toggles
@@ -28,7 +32,7 @@ Real native layout. Real scroll physics. Your design system applied automaticall
 
 ## Iterate with prompts
 
-Keep describing. Claude Code keeps generating.
+Keep describing. Your agent keeps generating.
 
 ```
 make the quick action buttons pill-shaped with an icon
@@ -51,9 +55,9 @@ Each prompt updates the Simulator in seconds. You never touch a file.
 The flow is the same every time:
 
 ```
-1. You type a prompt in Claude Code
-2. Claude Code reads DESIGN.md and CLAUDE.md for context
-3. Claude Code writes a new screen file to /screens/
+1. You type a prompt in your agent
+2. Your agent reads DESIGN.md and AGENTS.md for context
+3. Your agent writes a new screen file to /screens/
 4. The Simulator hot-reloads — the screen appears
 ```
 

@@ -3,7 +3,7 @@ title: "Component library"
 description: "Use Prototo's built-in components or bring your team's."
 ---
 
-Every screen Claude Code generates is built from components. The library it uses lives in DESIGN.md. Switch it any time with a prompt.
+Every screen your coding agent generates is built from components. The library it uses lives in DESIGN.md. Switch it any time with a prompt.
 
 ## Prototo built-in components
 
@@ -27,7 +27,7 @@ Bottom navigation uses Apple's native tab bar directly (via expo-router) rather 
 
 If your production app uses Tamagui, Gluestack, React Native Paper, NativeWind, or a custom internal library — you can prototype with the exact same components your engineers use.
 
-Run `npx proto design` and pick your library. Or tell Claude Code:
+Run `npx proto design` and pick your library. Or tell your agent:
 
 ```
 update DESIGN.md — switch the component library to Tamagui.
@@ -35,11 +35,11 @@ Package is @tamagui/core, import from @tamagui/core.
 Then regenerate the Home screen using Tamagui components.
 ```
 
-Proto installs the package. Claude Code rewrites screens with the new imports. The Simulator updates.
+Proto installs the package. Your agent rewrites screens with the new imports. The Simulator updates.
 
 ## Custom or proprietary libraries
 
-For a library Claude Code may not know well, add 2–3 component examples to DESIGN.md:
+For a library your agent may not know well, add 2–3 component examples to DESIGN.md:
 
 ```text
 ## Examples
@@ -53,14 +53,14 @@ import { Surface } from '@acme/mobile-components';
 &lt;Surface elevated padding="md"&gt;content&lt;/Surface&gt;
 ```
 
-Claude Code reads these and follows the exact API pattern when generating screens. Two or three examples cover most libraries — Claude extrapolates the rest.
+Your agent reads these and follows the exact API pattern when generating screens. Two or three examples cover most libraries. It extrapolates the rest.
 
 ## The fallback rule
 
-If the specified library doesn't have a component that covers a need (for example, Tamagui has no drop-in safe-area wrapper), Claude Code falls back to a Prototo primitive silently. You never see this. Screens just work.
+If the specified library doesn't have a component that covers a need (for example, Tamagui has no drop-in safe-area wrapper), Your agent falls back to a Prototo primitive silently. You never see this. Screens just work.
 
 ## Why this matters at handoff
 
-When you prototype using your team's actual production library, the screens Claude Code generates aren't throwaway prototypes — they are close to production code. An engineer opens a screen, sees familiar imports and patterns, and can move it directly into the production codebase with minimal rework.
+When you prototype using your team's actual production library, the screens your agent generates aren't throwaway prototypes. They are close to production code. An engineer opens a screen, sees familiar imports and patterns, and can move it directly into the production codebase with minimal rework.
 
 The gap between prototype and production collapses from weeks to hours.

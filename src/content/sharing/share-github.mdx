@@ -3,15 +3,15 @@ title: Share via GitHub
 description: "Send your prototype to someone else by pushing the project to GitHub so they can clone and run it."
 ---
 
-Want someone to have the actual project, not just a preview? Put it on **GitHub** so they can download it and run the same prototype on their own Mac. They get the real files and can keep building in Claude Code.
+Want someone to have the actual project, not just a preview? Put it on **GitHub** so they can download it and run the same prototype on their own Mac. They get the real files and can keep building with their own coding agent.
 
 If you just want to *show* your prototype, [Share a live preview](/sharing/share-link) is the quick path — one command, a link, nothing for them to install.
 
-GitHub sharing is for handing over the project itself. The other person needs [Prerequisites](/getting-started/prerequisites) installed (Node.js, Xcode, Claude Code) and a few Terminal commands. It works well for teammates and engineers who are comfortable on a Mac.
+GitHub sharing is for handing over the project itself. The other person needs [Prerequisites](/getting-started/prerequisites) installed (Node.js, Xcode, and a coding agent) and a few Terminal commands. It works well for teammates and engineers who are comfortable on a Mac.
 
 ## What gets shared
 
-Your project folder holds everything that matters: screens, `DESIGN.md`, `CLAUDE.md`, and project config. You upload that folder to GitHub. You do **not** upload `node_modules` (dependencies are reinstalled on the other Mac).
+Your project folder holds everything that matters: screens, `DESIGN.md`, `AGENTS.md`, and project config. You upload that folder to GitHub. You do **not** upload `node_modules` (dependencies are reinstalled on the other Mac).
 
 If the folder already has a `.gitignore` file, leave it as is. If not, create one in your project root with:
 
@@ -90,7 +90,7 @@ Copy the repo URL from GitHub (e.g. `https://github.com/your-username/my-prototy
 
 ## Run someone else's prototype (them)
 
-They need the same Mac setup as you: Node.js, Xcode, and Claude Code. See [Prerequisites](/getting-started/prerequisites).
+They need the same Mac setup as you: Node.js, Xcode, and a coding agent (Claude Code or Codex). See [Prerequisites](/getting-started/prerequisites).
 
 **1. Download the project**
 
@@ -106,7 +106,7 @@ cd my-prototype
 npm install
 ```
 
-**3. Start Prototo and Claude Code**
+**3. Start Prototo and your agent**
 
 Same as [Open Prototo again](/tips/reopening):
 
@@ -118,10 +118,10 @@ In a second Terminal tab, in the same folder:
 
 ```bash
 cd ~/my-prototype
-claude
+claude   # or: codex
 ```
 
-They see your screens in the Simulator and can prompt changes in their own Claude Code session.
+They see your screens in the Simulator and can prompt changes in their own agent session.
 
 ## Updating after you change the prototype
 

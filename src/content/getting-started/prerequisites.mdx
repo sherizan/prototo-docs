@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-description: Install Node.js, Xcode, and Claude Code before creating your first Proto project.
+description: Install Node.js, Xcode, and a coding agent before creating your first Proto project.
 ---
 
 The north star is simple: time from `npm create proto@latest` to a working prototype running in the iOS Simulator — under 60 seconds.
@@ -41,19 +41,29 @@ This installs the command line tools Xcode needs to run the Simulator.
 Xcode is ~8GB. Plan for 20-40 minutes depending on your connection.
 </Note>
 
-## Step 3 — Install Claude Code
+## Step 3: Install a coding agent
 
-Claude Code is the design tool. You'll describe screens in plain language and it will write them into your project. There is no other prompt surface — Claude Code CLI is the only one.
+Your coding agent turns plain language into working screens. Prototo works with two: Claude Code (recommended) and OpenAI Codex. Pick whichever you already pay for. Prototo runs on the AI subscription you already have and never charges for AI use.
 
-Install it by running:
+**Claude Code** (from Anthropic):
 
-```bash
+```sh
 npm install -g @anthropic-ai/claude-code
 ```
 
-You'll need an Anthropic account. Sign up at claude.ai if you don't have one.
+You'll need an Anthropic account. Sign up at [claude.ai](https://claude.ai) if you don't have one.
 
-For better results with Figma files, current Expo APIs, and iOS-native interaction, see [Configure Claude Code](/getting-started/configure-claude-code) — optional, one-time setup.
+**Codex** (from OpenAI):
+
+```sh
+npm install -g @openai/codex
+```
+
+You'll need a ChatGPT account. Sign up at [chatgpt.com](https://chatgpt.com) if you don't have one.
+
+Already using Prototo Desktop? It walks you through this choice on first launch, so you can skip ahead.
+
+Using Claude Code? See [Configure Claude Code](/getting-started/configure-claude-code) for optional extras.
 
 ## Step 4 — Create your first Proto project
 

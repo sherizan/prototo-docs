@@ -10,7 +10,7 @@ The rule: no error shown to you requires engineering knowledge to interpret. Whe
 | What you see | What to do |
 |---|---|
 | A component couldn't be found | Run: `npx proto reset` |
-| A screen has an error | Ask Claude Code: `fix any errors in the [ScreenName] screen` |
+| A screen has an error | Ask your agent: `fix any errors in the [ScreenName] screen` |
 | Prototo is already running | Close the other terminal window first |
 | Prototo needs to update | Run: `proto update` |
 | Can't reach your device | Check you're on the same WiFi |
@@ -28,14 +28,14 @@ You'll see: `Proto restarted. Simulator is updating.`
 
 ## A screen has an error
 
-If Claude Code generates a screen that won't compile, the error translation layer responds:
+If your agent generates a screen that won't compile, the error translation layer responds:
 
 ```
-A screen has an error. Ask Claude Code:
+A screen has an error. Ask your agent:
 "fix any errors in the [ScreenName] screen"
 ```
 
-Paste that into Claude Code. It reads the file, identifies the issue, rewrites it. Resolved without you seeing the underlying error.
+Paste that into your agent. It reads the file, identifies the issue, rewrites it. Resolved without you seeing the underlying error.
 
 ## The Simulator isn't opening
 
@@ -51,15 +51,15 @@ Then try:
 npx proto reset
 ```
 
-## Claude Code isn't reading my design system
+## My agent isn't reading my design system
 
-CLAUDE.md and DESIGN.md must be at the root of your project folder — not inside any subfolder.
+AGENTS.md and DESIGN.md must be at the root of your project folder, not inside any subfolder.
 
-Open Claude Code from inside the project folder:
+Start your agent from inside the project folder:
 
 ```bash
 cd myapp
-claude
+claude   # or: codex
 ```
 
 ## npx proto design isn't working
@@ -73,7 +73,7 @@ npx proto design
 
 ## A custom component library isn't generating right screens
 
-Add 2–3 component examples to an `## Examples` section in DESIGN.md, then ask Claude Code to regenerate the screen. Two or three examples cover most libraries — Claude extrapolates the rest.
+Add 2–3 component examples to an `## Examples` section in DESIGN.md, then ask your agent to regenerate the screen. Two or three examples cover most libraries. It extrapolates the rest.
 
 ## I need to start fresh
 
