@@ -1,0 +1,40 @@
+---
+title: "Point and edit"
+description: "Tap an element on the iPhone preview, then say what to change."
+---
+
+Sometimes the fastest way to describe an element is to point at it. Point and edit lets you tap anything on the iPhone preview in Prototo Desktop and have it named in your prompt, so you only type the change.
+
+## How it works
+
+1. In the preview's dock (the bar under the iPhone), turn on the accessibility overlay. Its tooltip reads **Show accessibility overlay**. Every tappable element on the screen gets an outline.
+2. Tap the element you want to change. A tag naming it appears in the terminal prompt, and the cursor lands right after it:
+
+```
+> [Leave early access button · screens/Home.tsx:42] ▌
+```
+
+3. Keep typing what you want, then press Enter:
+
+```
+> [Leave early access button · screens/Home.tsx:42] make it pink and full width
+```
+
+Your agent already knows which element you mean and where it lives. It makes the change and the preview updates in seconds.
+
+## What the tag contains
+
+The tag names the element by its label and kind (`Sign in button`, `Notifications switch`, `Profile image`) and, a moment after you tap, the screen file and line that draws it. The label appears instantly; the location follows about a second later, as long as you have not started typing yet.
+
+If you are quick and the location never appears, that is fine. The label alone is enough for your agent to find the element.
+
+## Tips
+
+- **One element per prompt.** Tap, describe, Enter. For a second element, tap again after the first change lands.
+- **Tap the exact thing.** Tapping a button's text gives you the button. Tapping the space around it may give you the card or the screen behind it, which is still useful for layout changes ("give this card more padding").
+- **Elements without a label** show their kind and position instead (`image at 44,1230`). Add a word or two so your agent knows what you mean: "the hero image, make it edge to edge".
+- **Turn the overlay off** when you want to tap through the prototype normally. With it on, taps select elements instead of pressing them.
+
+## Older projects
+
+Projects created before September 2026 pick this up automatically the first time you open them in Prototo Desktop. If a tap only ever shows the label without a file and line, close and reopen the project once.
