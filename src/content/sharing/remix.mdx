@@ -1,0 +1,39 @@
+---
+title: "Remix a teammate's prototype"
+description: "On a Team plan, take your own copy of anything your team has published."
+---
+
+On a [Team plan](/sharing/plans), every prototype anyone on your team publishes shows up on your team page at [prototo.app/team](https://prototo.app/team). Any of them can be remixed: you get your own copy to build on, in a new folder on your Mac.
+
+## Remix in two steps
+
+1. On your team page, find the prototype and press **Remix**. Copy the command it shows.
+2. In your terminal, go to the folder where you keep your prototypes and paste it:
+
+```
+proto remix https://prototo.app/p/XK92MABCDEFG
+```
+
+Prototo downloads the prototype into a folder named after it and sets it up. Then:
+
+```
+cd checkout-flow && proto start
+```
+
+Want a different folder name? Add it after the link: `proto remix <link> my-take`.
+
+## What a remix is
+
+A remix is a **copy**, the way "Duplicate" works in Figma. You get the prototype exactly as your teammate last published it, and from then on it's yours. Changing it never changes theirs, and their next publish never changes yours.
+
+It gets its **own link** the first time you share it, so your version and the original can live side by side on the team page.
+
+## Who can remix what
+
+Anyone on the team can remix any prototype the team has published, while the team's plan is active. The person who published it can always remix their own.
+
+If you see "Remixable after the next publish" on a prototype, it was published before remix existed. Ask its designer to run `proto share` once more and it becomes remixable.
+
+## Limits
+
+Prototypes over 45 MB, usually because of large videos in `assets/`, can't be remixed. The link still publishes and works. The designer sees a note about it when they share.
