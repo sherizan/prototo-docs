@@ -11,6 +11,8 @@ cross-repo contracts is auto-loaded here:
 
 @~/Public/prototo-shared/CONTRACTS.md
 
+**Backlog (all Prototo repos):** GitHub Issues on `sherizan/prototo-shared` + the Prototo project board — `gh issue list -R sherizan/prototo-shared -l docs` when picking up work; add deferred docs follow-ups there (`gh issue create` + `gh project item-add 5 --owner sherizan --url <issue>`), not in a local file.
+
 - **proto** (`~/Public/proto`) — the CLI (`@sherizan/proto-cli`) + iOS dev-client.
 - **prototo-website** (`~/Public/prototo-website`) — backend, auth, share, studio.
 - **prototo-desktop** (`~/Public/prototo-desktop`) — the Mac app (the primary flow).
