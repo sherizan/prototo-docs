@@ -11,9 +11,18 @@ First, get the free **[Prototo app](https://apps.apple.com/app/id6772877748)** f
 
 In Prototo Desktop, click **Preview** in the title bar. A QR code drops down. In the Prototo app on your iPhone, tap **Scan** and point it at the code. Your prototype loads on the phone and picks up changes as you keep describing screens on the Mac. Nothing gets published.
 
-- **Same Wi-Fi.** iPhone and Mac on the same network. The Preview button becomes active once your project is running.
-- **Keep Prototo Desktop open.** This preview is your live session.
+- **Keep Prototo Desktop open.** This preview is your live session. The Preview button becomes active once your project is running.
 - If macOS asks to allow incoming network connections the first time your phone connects, click Allow.
+
+### If it won't connect
+
+Your phone and Mac need to be on the same Wi-Fi, and some networks (offices, hotels, guest Wi-Fi) keep devices from talking to each other even when they are. The reliable fix takes a minute:
+
+1. On your iPhone, turn on **Personal Hotspot** in Settings.
+2. On your Mac, join that hotspot from the Wi-Fi menu.
+3. Click **Preview** again and scan.
+
+Your Mac keeps its internet through the phone, and the preview connects every time.
 
 Using [the terminal flow](/getting-started/terminal) instead? `proto start` prints the same QR right in your terminal.
 
