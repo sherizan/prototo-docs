@@ -4,21 +4,16 @@ prototo-docs: the designer-facing documentation site at docs.prototo.app.
 Next.js 16 + Nextra 4. Content is MDX in `src/content/` with `_meta.ts`
 navigation. Deploys on Vercel from main.
 
-## Prototo ecosystem (4 repos — read the shared contracts)
+Docs: `DESIGN.md` before any visual change · `README.md` setup. `proto-docs-prompt.md` is the
+original build prompt (history only).
 
-This repo is one of the Prototo siblings. The single source of truth for
-cross-repo contracts is auto-loaded here:
+## Prototo ecosystem
 
 @~/Public/prototo-shared/CONTRACTS.md
 
-**Backlog (all Prototo repos):** GitHub Issues on `sherizan/prototo-shared` + the Prototo project board — `gh issue list -R sherizan/prototo-shared -l docs` when picking up work; add deferred docs follow-ups there (`gh issue create` + `gh project item-add 5 --owner sherizan --url <issue>`), not in a local file.
-
-- **proto** (`~/Public/proto`) — the CLI (`@sherizan/proto-cli`) + iOS dev-client.
-- **prototo-website** (`~/Public/prototo-website`) — backend, auth, share, studio.
-- **prototo-desktop** (`~/Public/prototo-desktop`) — the Mac app (the primary flow).
-- **prototo-docs** (here) — consumes everything: docs must match shipped
-  behavior. When CONTRACTS.md's changelog shows a user-facing change (new CLI
-  version, new tool, URL shape, desktop release), check the affected pages.
+This repo is a pure consumer: pages must match shipped behavior. When `~/Public/prototo-shared/CHANGELOG.md`
+shows a user-facing change (CLI version, URL shape, desktop release), check the affected pages.
+Backlog label: `docs`.
 
 ## Writing rules
 
