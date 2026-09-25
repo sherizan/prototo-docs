@@ -7,10 +7,5 @@ export default {
   'configure-claude-code': 'Configure Claude Code',
   'prototo-desktop': 'Prototo Desktop',
   'first-prototype': 'Your first prototype',
-  'preview-on-iphone': 'Preview on iPhone',
-  // Archived: the legacy two-window flow. Reachable by URL, hidden from nav.
-  terminal: {
-    title: 'The terminal flow',
-    display: 'hidden'
-  }
+  'preview-on-iphone': 'Preview on iPhone'
 }

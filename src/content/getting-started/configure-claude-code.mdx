@@ -5,7 +5,7 @@ description: "Optional MCP servers and plugins so Claude generates better Expo s
 
 Prototo works out of the box once [Prerequisites](/getting-started/prerequisites) are installed. You can go straight to [Prototo Desktop](/getting-started/prototo-desktop).
 
-This page is optional. Do it once on your Mac if you want Claude Code to prototype with **current Expo docs**, **Figma context**, and **iOS-level interaction patterns** — not just generic React from memory.
+This page is optional. Do it once on your Mac if you want Claude Code to prototype with **current Expo docs**, **Figma context**, and **iOS-level interaction patterns**, not just generic React from memory.
 
 Using Codex? This page covers Claude Code extras. Codex connects to Prototo's preview tools automatically, so you can skip this page.
 
@@ -19,13 +19,13 @@ Claude Code can connect to external tools through **MCP servers** (live data and
 | **Context7** | Look up current Expo and React Native docs instead of outdated training data |
 | **Expo plugin** | Skills for native navigation, animations, SF Symbols, blur, sheets, and iOS interaction patterns |
 
-You install these once per Mac. They apply whenever you run `claude` inside a Proto project.
+You install these once per Mac. They apply to every Prototo project, because Prototo starts Claude Code inside the project for you.
 
-## 1 — Figma MCP
+## 1. Figma MCP
 
 Best if you design in Figma and want screens to match your file.
 
-**Recommended — Figma plugin**
+**Recommended: Figma plugin**
 
 In Terminal:
 
@@ -43,15 +43,15 @@ claude mcp add --scope user --transport http figma https://mcp.figma.com/mcp
 
 Then open Claude Code, run `/mcp`, select **figma**, and choose **Authenticate**.
 
-Once connected, you can prompt with Figma context — for example: "build the Home screen from my Figma file, match spacing and typography from the selected frame."
+Once connected, you can prompt with Figma context, for example: "build the Home screen from my Figma file, match spacing and typography from the selected frame."
 
 Official guide: [Figma MCP for Claude Code](https://help.figma.com/hc/en-us/articles/39888612464151-Claude-Code-and-Figma-Set-up-the-MCP-server)
 
-## 2 — Context7 (Expo and library docs)
+## 2. Context7 (Expo and library docs)
 
 Prototo runs on Expo. Context7 fetches **up-to-date** documentation when Claude writes or fixes screens.
 
-**Recommended — one-command setup**
+**Recommended: one-command setup**
 
 ```bash
 npx ctx7 setup --claude
@@ -78,9 +78,9 @@ claude mcp add --scope user --transport http context7 https://mcp.context7.com/m
 
 Run `/mcp` in Claude Code to confirm **context7** shows as connected.
 
-Context7 shines when you ask for specific APIs — navigation, Reanimated, expo-image, native tabs — and Claude needs the correct import and props for your Expo SDK version.
+Context7 shines when you ask for specific APIs (navigation, Reanimated, expo-image, native tabs) and Claude needs the correct import and props for your Expo SDK version.
 
-## 3 — Expo plugin (native UI and interaction)
+## 3. Expo plugin (native UI and interaction)
 
 The official Expo plugin adds skills tuned for **real native feel**: stack headers, form sheets, haptics-friendly controls, scroll physics, zoom transitions, and platform-specific patterns.
 
@@ -106,21 +106,14 @@ use a native form sheet for the edit profile flow with a save button in the tool
 add a zoom transition when tapping a card into the detail screen
 ```
 
-For advanced cases, the same plugin includes skills for SwiftUI views, native data fetching, and Expo upgrades — you do not need to install them separately.
+For advanced cases, the same plugin includes skills for SwiftUI views, native data fetching, and Expo upgrades. You do not need to install them separately.
 
 ## Verify everything
 
-Open Claude Code in any Proto project:
+Open any project in Prototo, then type these in the agent pane:
 
-```bash
-cd myapp
-claude
-```
-
-Then:
-
-- **`/mcp`** — lists MCP servers and connection status (Figma, Context7, etc.)
-- **`/plugin`** — lists installed plugins and their skills
+- **`/mcp`**: lists MCP servers and connection status (Figma, Context7, etc.)
+- **`/plugin`**: lists installed plugins and their skills
 
 If a server shows as disconnected, select it in `/mcp` and authenticate again.
 
@@ -143,7 +136,7 @@ To give everyone the same MCP config, add a `.mcp.json` file at your project roo
 }
 ```
 
-Each person still signs in to Figma and Context7 on their own Mac the first time. See [Share via GitHub](/sharing/share-github) if you want the config file in the repo.
+Each person still signs in to Figma and Context7 on their own Mac the first time.
 
 <Note>
 These extras are Claude Code features, not part of Prototo itself. If a command fails, check you are on a recent Claude Code version: `claude --version`. You can skip this entire page and still prototype. You will just get better results with Figma files, current Expo APIs, and native interaction patterns once it is configured.

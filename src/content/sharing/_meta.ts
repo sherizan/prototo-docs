@@ -6,6 +6,5 @@ export default {
   'share-link': 'Share your prototype',
   account: 'Your account',
   plans: 'Plans and limits',
-  remix: "Remix a teammate's prototype",
-  'share-github': 'Share via GitHub'
+  remix: "Remix a teammate's prototype"
 }

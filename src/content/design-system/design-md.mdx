@@ -8,25 +8,19 @@ DESIGN.md is not a code file. It is not a JSON config. It is a structured markdo
 It serves three audiences at once:
 
 1. **Your coding agent**: reads it before every generation to stay on-brand automatically
-2. **You** — update it via prompts to evolve the design system
-3. **Engineers** — read it at handoff to understand the design decisions
+2. **You**: update it via prompts to evolve the design system
+3. **Engineers**: read it at handoff to understand the design decisions
 
 ## Set up your design system
 
-Run this once per project:
+Every new project starts with a DESIGN.md: the Liquid Glass theme, a blue accent, and Prototo's built-in components. To make it yours, tell your agent what you want:
 
-```bash
-npx proto design
+```
+set up my design system: Liquid Glass theme, accent colour #E86A9C,
+app name My App, using Prototo's components
 ```
 
-Answer four questions:
-
-1. Which theme? (Liquid Glass / Material You / Base)
-2. Accent colour?
-3. Component library? (Proto, Tamagui, Gluestack UI, React Native Paper, NativeWind, or Custom)
-4. App name?
-
-Proto writes a complete DESIGN.md from your answers. For known libraries, it also installs the package silently.
+Your agent rewrites DESIGN.md from that, and every screen after follows it. For a known component library (Tamagui, Gluestack UI, React Native Paper, NativeWind), name it and your agent installs it too. See [Component library](/design-system/component-library).
 
 ## What DESIGN.md contains
 
@@ -75,7 +69,7 @@ Proto writes a complete DESIGN.md from your answers. For known libraries, it als
 - Modal blur: 60
 
 ## Screens
-- Home (initial) — starter screen
+- Home (initial): starter screen
 ```
 
 ## Update your design system with prompts
@@ -83,7 +77,7 @@ Proto writes a complete DESIGN.md from your answers. For known libraries, it als
 Never edit DESIGN.md manually. Describe the change instead:
 
 ```
-update DESIGN.md — change the accent colour to #5856D6
+update DESIGN.md: change the accent colour to #5856D6
 and tighten the card radius to 16. Then regenerate the
 Home and Settings screens to reflect the changes.
 ```

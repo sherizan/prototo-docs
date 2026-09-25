@@ -1,90 +1,53 @@
 ---
 title: "Troubleshooting"
-description: "Most problems have a one-line fix."
+description: "Most problems have a one-click fix."
 ---
 
-The rule: no error shown to you requires engineering knowledge to interpret. When Prototo can't recover automatically, it tells you what to do.
+The rule: no error shown to you requires engineering knowledge to interpret. When Prototo can't recover on its own, it tells you what to do.
 
-## The error translation layer
+## What you see, and what to do
 
 | What you see | What to do |
 |---|---|
-| A component couldn't be found | Run: `npx proto reset` |
+| A component couldn't be found | Click **Reload** in the toolbar under the iPhone |
 | A screen has an error | Ask your agent: `fix any errors in the [ScreenName] screen` |
-| Prototo is already running | Close the other terminal window first |
-| Prototo needs to update | Run: `proto update` |
-| Can't reach your device | Check you're on the same WiFi |
-| Something went wrong | Run: `npx proto reset` |
+| Prototo is already running | Another Prototo window has the Simulator. Quit it, then try again |
+| Prototo needs to update | Nothing to do: Prototo updates itself when you open a project |
+| Can't reach your device | Check your iPhone and Mac are on the same Wi-Fi (or use your iPhone's hotspot, see [Preview on iPhone](/getting-started/preview-on-iphone)) |
+| Something went wrong | Click **Reload** in the toolbar under the iPhone |
 
-## The escape hatch: npx proto reset
+## The escape hatch: Reload
 
-```bash
-npx proto reset
-```
+Click **Reload** in the toolbar under the iPhone. This fixes most stuck states: Prototo clears its caches and restarts your prototype, then the preview comes back.
 
-This fixes 90% of issues. Silently it kills the bundler, clears caches, and restarts the environment with the Simulator open.
-
-You'll see: `Proto restarted. Simulator is updating.`
+If taps stop landing on the preview but the picture keeps moving, choose **View › Restart Preview** instead.
 
 ## A screen has an error
 
-If your agent generates a screen that won't compile, the error translation layer responds:
+If your agent writes a screen that won't run, Prototo tells you which one. Ask your agent:
 
 ```
-A screen has an error. Ask your agent:
-"fix any errors in the [ScreenName] screen"
+fix any errors in the [ScreenName] screen
 ```
 
-Paste that into your agent. It reads the file, identifies the issue, rewrites it. Resolved without you seeing the underlying error.
+It reads the file, finds the issue, and rewrites it, without you seeing the underlying error.
 
-## The Simulator isn't opening
+## The iPhone preview isn't showing
 
-Make sure Xcode is installed and you've run:
-
-```bash
-xcode-select --install
-```
-
-Then try:
-
-```bash
-npx proto reset
-```
+Prototo checks Xcode and the iOS Simulator when it starts. If something is missing, it shows the step to fix it. If everything is installed and the preview still doesn't appear, choose **View › Restart Preview**.
 
 ## My agent isn't reading my design system
 
-AGENTS.md and DESIGN.md must be at the root of your project folder, not inside any subfolder.
+AGENTS.md and DESIGN.md must be at the root of your project folder, not inside a subfolder. Prototo starts your agent in the project folder for you, so it picks them up automatically.
 
-Start your agent from inside the project folder:
+## A custom component library isn't generating the right screens
 
-```bash
-cd myapp
-claude   # or: codex
-```
-
-## npx proto design isn't working
-
-Make sure you're inside a Proto project folder:
-
-```bash
-cd myapp
-npx proto design
-```
-
-## A custom component library isn't generating right screens
-
-Add 2–3 component examples to an `## Examples` section in DESIGN.md, then ask your agent to regenerate the screen. Two or three examples cover most libraries. It extrapolates the rest.
+Add 2 or 3 component examples to an `## Examples` section in DESIGN.md, then ask your agent to regenerate the screen. Two or three examples cover most libraries. It works out the rest.
 
 ## I need to start fresh
 
-Delete the project folder and run:
-
-```bash
-npm create proto@latest myapp
-```
+Click **New project** in Prototo and give it a new name. Your old project stays in its folder until you delete it from Finder.
 
 ## Still stuck?
 
-Open an issue on GitHub: [github.com/sherizan/proto/issues](https://github.com/sherizan/proto/issues)
-
-Or reach out via [prototo.app](https://prototo.app).
+Reach out via [prototo.app](https://prototo.app).

@@ -1,48 +1,26 @@
 ---
-title: Simulator
-description: "Screenshots, screen recordings, and rounded tap indicators in Apple's iOS Simulator."
+title: The iPhone preview
+description: "Screenshots, clips, tap indicators, and full screen for the live iPhone in Prototo."
 ---
 
-These use Apple's **Simulator** app — the iPhone preview on your Mac. Click the Simulator window first so these shortcuts apply there, not in Terminal.
+The iPhone on the right of Prototo is a real iOS Simulator, running your prototype live. Prototo runs it for you in the background, so there's no separate Simulator window to manage.
 
 ## Screenshot
 
-Get to the screen you want, then:
+Get to the screen you want, then press **⌘⇧4**, then **Space**, and click the iPhone preview. macOS saves a picture of it to your **Desktop**, ready for Slack, Figma, or slides.
 
-- **File → Save Screen** — or press **⌘S**
-- A preview appears beside the Simulator. It saves to your **Desktop** by default.
-- Hold **Option** while choosing **File → Save Screen** to pick a different folder.
+## Record a clip
 
-Full device resolution, ready for Slack, Figma, or slides.
+Click **Record** in the top right, tap through your prototype, and click it again to stop. Your clip opens in Studio, wrapped in a 3D iPhone you can angle and export. See [Record and wrap](/studio/recording).
 
-## Record a video
+## Show where you tap
 
-Get to the starting screen, then:
+The round touch cursor on the preview shows exactly where you click, which helps when you present. Turn it on or off with **View › Show Touch Cursor**. It only appears in the live preview: recordings capture the phone screen itself.
 
-- **File → Record Screen** — or press **⌘R** (only when the Simulator window is focused, not the Prototo Terminal window)
-- Use the app — scroll, tap, navigate — while it records.
-- Stop with **File → Stop Recording**, or the stop button on the Simulator window.
+## Full screen
 
-The video saves to your **Desktop**. Hold **Option** when you start recording to choose another folder. You can export as MP4 or animated GIF from the preview.
+Use the full-screen button in the toolbar under the iPhone to give the preview the whole window, for presenting or a closer look. Press **Esc** to get the agent back.
 
-<Note>
-**⌘R** in the Simulator records video. **R** in the Prototo Terminal window reloads your app. See [Keyboard shortcuts](/tips/shortcuts) — click the right window before you press the key.
-</Note>
+## If the preview stops responding
 
-## Rounded tap indicator (for demos)
-
-When you record or present, it helps to show where you tap — a small **round circle** instead of the normal arrow cursor.
-
-With **Simulator** in focus (Mac menu bar):
-
-- **Features → Show Single Touch** — a circle follows each click
-
-On newer Xcode versions you may also find **Simulator → Settings… → Visual indicators → Show single touches**. Turn it on, then quit and reopen Simulator if the circle does not appear.
-
-Optional: **Features → Show Touch Indicators** — extra feedback while you click around.
-
-<Note>
-Simulator’s own **File → Record Screen** video sometimes **does not** include the round tap circle. If your saved video has no taps visible, record the Simulator window with macOS instead: press **⌘⇧5**, choose **Record Selected Portion**, drag around the phone preview, then record.
-</Note>
-
-For tap dots baked into the **phone screen** (useful on a physical iPhone too): in the simulated device open **Settings → Developer → Show Touches** (turn on **Developer Mode** under **Settings → Privacy & Security** first if iOS asks).
+If taps stop landing but the picture keeps moving, choose **View › Restart Preview**. Your prototype comes straight back. More fixes in [Troubleshooting](/reference/troubleshooting).
