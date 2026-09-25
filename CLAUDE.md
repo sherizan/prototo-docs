@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 prototo-docs: the designer-facing documentation site at docs.prototo.app.
-Next.js 16 + Nextra 4. Content is MDX in `src/content/` with `_meta.json`
+Next.js 16 + Nextra 4. Content is MDX in `src/content/` with `_meta.ts`
 navigation. Deploys on Vercel from main.
 
 ## Prototo ecosystem (4 repos — read the shared contracts)
@@ -25,9 +25,12 @@ cross-repo contracts is auto-loaded here:
 - Designer-first. Never mention Metro, bundlers, React Native internals, or
   package versions. The reader is a product designer, not an engineer.
 - **No em dashes in copy** (house rule). Use periods, colons, or commas.
-- CLI commands are always `npx proto <cmd>` (`proto` is not on PATH).
-- The PRIMARY flow is Prototo Desktop (one window, prototo.app/download);
-  the two-terminal flow is the alternative for terminal pros.
+- Prototo Desktop is the ONLY flow (prototo-shared#74, 2026-09-26): there are
+  no terminal users. Describe app actions (Publish, Record, Flow, Export flow,
+  New project, View › Restart Preview, the Prototo menu), never `npx proto …`
+  commands; the app runs the CLI itself. Claude Code's own setup commands
+  (configure-claude-code) are the exception. Removed pages get a redirect in
+  `next.config.mjs`.
 
 ## Commands
 

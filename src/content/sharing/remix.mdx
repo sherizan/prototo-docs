@@ -5,26 +5,13 @@ description: "On a Team plan, take your own copy of anything your team has publi
 
 On a [Team plan](/sharing/plans), every prototype anyone on your team publishes shows up on your team page at [prototo.app/team](https://prototo.app/team). Any of them can be remixed: you get your own copy to build on, in a new folder on your Mac.
 
-## From Prototo Desktop
+## Remix from Prototo Desktop
 
-Press **Team** (on the welcome screen, in the title bar, or from the app menu) and your team page opens on prototo.app. Remix from there, then open the new folder in Prototo Desktop with **Open project…**.
+On a Team plan, Prototo's **Home** is your team's home: your recent projects on one side, every prototype your team has published on the other, each with a picture of it.
 
-## In the terminal: two steps
-
-1. On the **Team** tab of your [account page](https://prototo.app/account?tab=team), find the prototype and press **Remix**. Copy the command it shows.
-2. In your terminal, go to the folder where you keep your prototypes and paste it:
-
-```
-proto remix https://prototo.app/p/XK92MABCDEFG
-```
-
-Prototo downloads the prototype into a folder named after it and sets it up. Then:
-
-```
-cd checkout-flow && proto start
-```
-
-Want a different folder name? Add it after the link: `proto remix <link> my-take`.
+1. Find the prototype and press **Remix**.
+2. Keep the suggested folder name (like `checkout-flow-blossom`) or type your own.
+3. Prototo downloads it, sets it up, and opens your copy, named after its folder.
 
 ## What a remix is
 
@@ -36,7 +23,7 @@ It gets its **own link** the first time you share it, so your version and the or
 
 Anyone on the team can remix any prototype the team has published, while the team's plan is active. The person who published it can always remix their own.
 
-If you see "Remixable after the next publish" on a prototype, it was published before remix existed. Ask its designer to run `proto share` once more and it becomes remixable.
+If you see "Remixable after the next publish" on a prototype, it was published before remix existed. Ask its designer to click **Publish** once more and it becomes remixable.
 
 ## Limits
 

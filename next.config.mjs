@@ -41,6 +41,14 @@ export default withNextra({
         destination: '/reference/troubleshooting',
         permanent: false
       },
+      // Prototo Desktop is the only flow now (prototo-shared#74)
+      {
+        source: '/getting-started/terminal',
+        destination: '/getting-started/prototo-desktop',
+        permanent: true
+      },
+      { source: '/tips/shortcuts', destination: '/tips/simulator', permanent: true },
+      { source: '/sharing/share-github', destination: '/sharing/share-link', permanent: true },
       { source: '/favicon.ico', destination: '/favicon.svg', permanent: false }
     ]
   }

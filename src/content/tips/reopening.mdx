@@ -1,38 +1,12 @@
 ---
 title: Open Prototo again
-description: "Start the same prototype again after you close Terminal or come back to your Mac."
+description: "Pick up the same prototype when you come back to your Mac."
 ---
 
-When you come back to your Mac and want to keep working on the same prototype:
+Open **Prototo** and click your project under **Recent**. That's it: Prototo starts your prototype, brings back the live iPhone, and starts your coding agent in the project, exactly where you left it. You are not starting from scratch, just waking it back up.
 
-1. Open **Terminal**.
-2. Go to your project folder (replace `myapp` with your folder name):
-
-```bash
-cd myapp
-```
+Working on something else? Use **File › Open Recent** in the menu bar, or the project name at the top of the window to switch projects.
 
 <Note>
-In **Prototo Desktop** this whole page is one step: open the app and click your project under Recent. The rest below is the terminal flow.
-</Note>
-
-3. Start Prototo — the Simulator opens:
-
-```bash
-npx proto start
-```
-
-4. Open a **second** Terminal tab or window. Go to the same folder and start your coding agent:
-
-```bash
-cd myapp
-claude   # or: codex
-```
-
-Leave the first window running Prototo. Do all your prompting in the second window. Watch the Simulator.
-
-That is the same setup as [Prototo Desktop](/getting-started/prototo-desktop). You are not starting from scratch — just waking it back up.
-
-<Note>
-On Mac, use **File → New Tab** in Terminal (or **⌘T**) for the second window. Run `cd myapp` in that tab before starting the agent.
+Prototo also reopens your last project on its own when you launch it.
 </Note>

@@ -14,28 +14,28 @@ These are always available as a fallback, even when another library is selected:
 | Screen | Base wrapper with safe area and optional scroll |
 | Stack | Vertical layout with gap, padding, and alignment |
 | Row | Horizontal layout with gap and alignment |
-| Text | Typography — title, headline, body, caption, label |
+| Text | Typography: title, headline, body, caption, label |
 | Card | Surface container, optional Liquid Glass |
 | Button | Primary, secondary, ghost, destructive |
 | Toggle | Themeable switch |
 | Modal | Bottom sheet |
 | Divider | Separator |
 
-Bottom navigation uses Apple's native tab bar directly (via expo-router) rather than a Proto component — same reason Proto doesn't ship its own Switch. Don't rebuild what Apple already ships.
+Bottom navigation uses Apple's native tab bar directly (via expo-router) rather than a Proto component, for the same reason Proto doesn't ship its own Switch. Don't rebuild what Apple already ships.
 
 ## Using your team's component library
 
-If your production app uses Tamagui, Gluestack, React Native Paper, NativeWind, or a custom internal library — you can prototype with the exact same components your engineers use.
+If your production app uses Tamagui, Gluestack, React Native Paper, NativeWind, or a custom internal library, you can prototype with the exact same components your engineers use.
 
-Run `npx proto design` and pick your library. Or tell your agent:
+Tell your agent:
 
 ```
-update DESIGN.md — switch the component library to Tamagui.
+update DESIGN.md: switch the component library to Tamagui.
 Package is @tamagui/core, import from @tamagui/core.
 Then regenerate the Home screen using Tamagui components.
 ```
 
-Proto installs the package. Your agent rewrites screens with the new imports. The Simulator updates.
+Your agent installs the package and rewrites screens with the new imports. The iPhone preview updates.
 
 ## Custom or proprietary libraries
 

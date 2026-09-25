@@ -1,41 +1,19 @@
 ---
 title: "Share your prototype"
-description: "Run npx proto share and send a link. They run the real prototype natively on their iPhone."
+description: "Click Publish and send a link. They run the real prototype natively on their iPhone."
 ---
 
-`npx proto share` turns your prototype into a link. Whoever you send it to opens it with the free **Prototo app** on their iPhone and runs the real thing natively, taps, animations, and all. No Mac, no Xcode, no code on their side.
+**Publish** turns your prototype into a link. Whoever you send it to opens it with the free **Prototo app** on their iPhone and runs the real thing natively, taps, animations, and all. No Mac, no Xcode, no code on their side.
 
-## In Prototo Desktop: click Publish
+## Click Publish
 
-Click the **Publish** button in the top right. That is the whole flow: Prototo publishes your prototype and shows the link and QR code right in the app, with a Copy button. Closed the dialog? The QR button next to Publish brings it back any time.
+Click the **Publish** button in the top right. That is the whole flow: Prototo publishes your prototype and shows the link and QR code right in the app, with a Copy button. Closed the dialog? The QR button next to Publish brings it back any time. The first time, Prototo signs you in so your shares are saved to your account (see [Your account](/sharing/account)). Your prototype is published to the cloud, so the link keeps working after you close Prototo.
 
 ![The Publish panel in Prototo Desktop: QR code, share link, and Copy button over the live iPhone preview](/desktop/publish-panel.png)
 
 ## Your share page
 
 Anyone who opens the link in a browser sees your prototype on its share page, with a picture of the screen you published from. If you've also exported your flow (**Export flow** in Prototo Desktop's Flow view), the page links to it: every screen in a phone frame, laid out in the order they link. See [Prototo Desktop](/getting-started/prototo-desktop).
-
-## In the terminal
-
-In your project run:
-
-```bash
-npx proto share
-```
-
-The first time, it signs you in so your shares are saved to your account (see [Your account](/sharing/account)). Then it publishes your prototype and prints your link:
-
-```
-Your prototype is live
-  https://prototo.app/p/abc123xyz
-
-Scan to open on any device:
-  ▒▒▒▒▒▒▒
-  ▒ QR  ▒
-  ▒▒▒▒▒▒▒
-```
-
-Your prototype is published to the cloud, so the link keeps working even after you close Prototo.
 
 ## What the other person does
 
@@ -48,20 +26,16 @@ If they open the link in a regular browser instead, the page walks them through 
 
 ## Name your share
 
-Prototo asks what to call you the first time and remembers it. To set it up front:
-
-```bash
-npx proto share --as "Sheri"
-```
+Prototo asks what to call you the first time and remembers it. To change it, choose **Prototo › Change Name…** in the menu bar.
 
 ## Re-share after changes
 
-Run `npx proto share` again any time. Your project keeps the same link, so you can resend the original URL and people see your latest version.
+Click **Publish** again any time. Your project keeps the same link, so you can resend the original URL and people see your latest version.
 
 <Note>
-Free accounts can share **3 prototypes at a time**, with links that last **7 days**. If you hit the limit, Prototo opens your account page so you can upgrade or free a slot. See [Plans and limits](/sharing/plans).
+On the Free plan, your first publish starts a **7-day Publish trial**. After it ends, upgrade to Plus to keep publishing. Links are permanent: everything you published stays live either way. See [Plans and limits](/sharing/plans).
 </Note>
 
-## Prefer to hand off the files?
+## Want a teammate to build on it?
 
-If the other person is on a Mac and wants the actual project to keep building, [Share via GitHub](/sharing/share-github) instead.
+On a Team plan, teammates can **remix** your prototype: they get their own copy to keep building, with its own link. See [Remix a teammate's prototype](/sharing/remix).
