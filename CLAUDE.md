@@ -9,7 +9,7 @@ original build prompt (history only).
 
 ## Prototo ecosystem
 
-@~/Public/prototo-shared/CONTRACTS.md
+@~/Public/prototo-shared/INDEX.md
 
 This repo is a pure consumer: pages must match shipped behavior. When `~/Public/prototo-shared/CHANGELOG.md`
 shows a user-facing change (CLI version, URL shape, desktop release), check the affected pages.
