@@ -16,10 +16,18 @@ These are always available as a fallback, even when another library is selected:
 | Row | Horizontal layout with gap and alignment |
 | Text | Typography: title, headline, body, caption, label |
 | Card | Surface container, optional Liquid Glass |
-| Button | Primary, secondary, ghost, destructive |
-| Toggle | Themeable switch |
-| Modal | Bottom sheet |
+| Button | Apple's own button in Liquid Glass, tinted with your accent. Primary, secondary, ghost, destructive. Can show an SF Symbol or a logo before the label |
+| Toggle | Apple's own switch, tinted with your accent |
+| Slider | Apple's own slider for picking a value in a range |
+| Stepper | Minus and plus buttons for counting up or down |
+| Picker | Choose one option: segmented control, pull-down menu, or wheel |
+| DatePicker | Pick a date, a time, or both |
+| Menu | A button that opens a list of actions |
+| Input | Text field |
+| Modal | Apple's own bottom sheet with a grabber, sized to its content. Swipe down to close |
+| Alert | Apple's own alert with a title, a message, and buttons |
 | Divider | Separator |
+| Lottie | Plays a Lottie animation |
 
 Bottom navigation uses Apple's native tab bar directly (via expo-router) rather than a Proto component, for the same reason Proto doesn't ship its own Switch. Don't rebuild what Apple already ships.
 
